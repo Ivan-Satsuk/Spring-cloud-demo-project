@@ -33,7 +33,7 @@ public class ProductService {
     @RequestMapping("/getAllProductsFiltered/{page}")
     public Page <Product> getAllProductsFiltered(@PathVariable(value = "page") int page,  @RequestParam(value = "specs") String []specs){
 
-        // Спецификация для реализация комбинированного либо одичного применения фильтров.
+        // Спецификация для реализация комбинированного либо одиночного применения фильтров.
 
         Specification<Product> productSpecification = Specification.where(null);
 
